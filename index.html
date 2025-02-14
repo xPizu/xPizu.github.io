@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loading Screen</title>
+    <style>
+      @keyframes blink {
+        0% { opacity: 1; }
+        50% { opacity: 0.3; }
+        100% { opacity: 1; }
+      }
+      .blink {
+        animation: blink 2s infinite;
+      }
+  
+      @keyframes progressIn {
+        0% { width: 0; }
+        100% { width: 100%; }
+      }
+  
+      .progress-anim:nth-child(1) {
+        animation: progressIn 1s ease-out 0s forwards;
+        animation-iteration-count: infinite;
+        width: 0;
+      }
+  
+      .step:nth-child(2) .progress-anim {
+        animation: progressIn 1s ease-out 1s forwards;
+        animation-iteration-count: infinite;
+        width: 0;
+      }
+  
+      .step:nth-child(3) .progress-anim {
+        animation: progressIn 1s ease-out 2s forwards;
+        animation-iteration-count: infinite;
+        width: 0;
+      }
+  
+      .step:nth-child(4) .progress-anim {
+        animation: progressIn 1s ease-out 3s forwards;
+        animation-iteration-count: infinite;
+        width: 0;
+      }
+  
+      .progress-container {
+        position: relative;
+        overflow: hidden;
+      }
+  
+      .progress-fill {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.2);
+      }
+    </style>
+    <link rel="stylesheet" crossorigin href="./assets/index-Bzalq9TI.css">
+  </head>
+  <body class="bg-cover bg-center h-screen" style="background-image: url('/assets/background-C1TkUhTi.png');">
+    <audio id="backgroundMusic" loop>
+      <source src="./assets/ost-CYuNbuLp.mp3" type="audio/mp3">
+      Votre navigateur ne supporte pas l'élément audio.
+    </audio>
+  
+    <div class="h-full flex flex-col text-white">
+      <div class="flex-1 flex flex-col justify-start mt-[600px]">
+        <h1 class="text-center font-bold text-3xl">Chargement en cours...</h1>
+        <p class="text-center blink mt-2 text-sm text-white/50">Préparation de votre connexion au serveur...</p>
+      </div>
+      
+      <!-- <div class="pb-32">
+        <div class="flex justify-center items-center space-x-8 mx-auto max-w-6xl">
+          <div class="relative w-48">
+            <div class="step bg-blue-500 text-white py-2 rounded-md shadow-lg text-center text-base font-medium overflow-hidden">
+              <span class="relative z-10">Connexion</span>
+              <div class="progress-fill progress-anim"></div>
+            </div>
+            <span class="absolute -bottom-7 left-1/2 transform -translate-x-1/2 text-sm text-white/75 whitespace-nowrap">
+              Connexion au serveur
+            </span>
+          </div>
+          
+          <div class="relative w-48">
+            <div class="step bg-blue-500 text-white py-2 rounded-md shadow-lg text-center text-base font-medium overflow-hidden">
+              <span class="relative z-10">Connexion</span>
+              <div class="progress-fill progress-anim"></div>
+            </div>
+            <span class="absolute -bottom-7 left-1/2 transform -translate-x-1/2 text-sm text-white/75 whitespace-nowrap">
+              Connexion au serveur
+            </span>
+          </div>
+          
+          <div class="relative w-48">
+            <div class="step bg-blue-500 text-white py-2 rounded-md shadow-lg text-center text-base font-medium overflow-hidden">
+              <span class="relative z-10">Connexion</span>
+              <div class="progress-fill progress-anim"></div>
+            </div>
+            <span class="absolute -bottom-7 left-1/2 transform -translate-x-1/2 text-sm text-white/75 whitespace-nowrap">
+              Connexion au serveur
+            </span>
+          </div>
+          
+          <div class="relative w-48">
+            <div class="step bg-blue-500 text-white py-2 rounded-md shadow-lg text-center text-base font-medium overflow-hidden">
+              <span class="relative z-10">Connexion</span>
+              <div class="progress-fill progress-anim"></div>
+            </div>
+            <span class="absolute -bottom-7 left-1/2 transform -translate-x-1/2 text-sm text-white/75 whitespace-nowrap">
+              Connexion au serveur
+            </span>
+          </div>
+        </div>
+      </div> -->
+    </div>
+
+    <script src="./assets/main.js"></script>
+  </body>
+</html>
