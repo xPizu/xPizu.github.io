@@ -8,7 +8,7 @@ window.onload = function() {
 }
 
 let totalFiles = 0;
-let filesNeeded = 0;
+let filesNeeded = 7;
 let currentStatus = '';
 
 function GameDetails(servername, serverurl, mapname, maxplayers, steamid, gamemode, volume, language) {
